@@ -20,7 +20,7 @@ client.on('ready', () => {
 
 client.on("message", (message) => {
   if (message.content.startsWith(Prefix + "help")) {
-    message.channel.send("```\n%**help**  Shows This Menu\n**%invite** Invite the Bot \n**%id** User Informations\n**%bc** Broadcast a Message For all Server Members\n**%server** Server Informations\n**%croles** To Create Ready Roles (Down) \n**%moveall** Move all Members to your Voice Channel\n**%info** Bot Informations ```");
+    message.channel.send("\n%**help**  Shows This Menu\n**%invite** Invite the Bot \n**%id** User Informations\n**%bc** Broadcast a Message For all Server Members\n**%server** Server Informations\n**%croles** To Create Ready Roles (Down) \n**%moveall** Move all Members to your Voice Channel\n**%info** Bot Informations");
   }
 });
 
