@@ -20,13 +20,13 @@ client.on('ready', () => {
 
 client.on("message", (message) => {
   if (message.content.startsWith(Prefix + "help")) {
-    message.channel.send("```\n.help\n.invite\n.status\n.id\n.bc\n.server\n.invites\n.croles\n.crooms\n.moveall\n.cc\n.info```");
+    message.channel.send("```\n%**help**  Shows This Menu\n**%invite** Invite the Bot \n**%id** User Informations\n**%bc** Broadcast a Message For all Server Members\n**%server** Server Informations\n**%croles** To Create Ready Roles (Down) \n**%moveall** Move all Members to your Voice Channel\n**%info** Bot Informations ```");
   }
 });
 
 client.on('message', msg => {
     if (msg.content === "%invite") {
-      msg.reply('https://discordapp.com/api/oauth2/authorize?client_id=465429074169561088&permissions=0&scope=bot');
+      msg.reply('https://discordapp.com/api/oauth2/authorize?client_id=477102530971566113&permissions=0&scope=bot');
     }
 });
 
@@ -107,7 +107,7 @@ client.on('message', message => {
                                             if(!message.channel.guild) return message.reply('** advertising me on DM ? 🤔   **');
         if (!message.member.hasPermissions(['ADMINISTRATOR'])){
         message.delete()
-    return message.reply(`** ممنوع نشر الروابط :angry: ! **`)
+    return message.reply(`** Links aren't allowed :angry: ! **`)
     }
 }
 });
@@ -234,7 +234,7 @@ client.on('message', message => {
 
         message.channel.send(`Are you sure? Once confirmed, you cannot reverse this action!\nTo confirm, type \`.close\`. This will time out in 10 seconds and be cancelled.`)
             .then((m) => {
-                message.channel.awaitMessages(response => response.content === '.close', {
+                message.channel.awaitMessages(response => response.content === '%close', {
                         max: 1,
                         time: 10000,
                         errors: ['time'],
