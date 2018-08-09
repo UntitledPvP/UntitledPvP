@@ -2,7 +2,7 @@ const Discord = require("discord.js");
 const bot = new Discord.Client();
 const Prefix = "%";
   
-  client.on('ready', () => {
+client.on('ready', () => {
     console.log('╔[════════════════════════════════════]╗');
     console.log('')
     console.log('            ╔[════════════]╗')
@@ -16,7 +16,7 @@ const Prefix = "%";
     console.log(`Users! [ " ${client.users.size} " ]`);
     console.log('')
     console.log('╚[════════════════════════════════════]╝')
-  });
+});
   
   function randomStatus() {
 	let status = ["Created by Untitled Developer Team", "Prefix: % or Tag Me!"]
