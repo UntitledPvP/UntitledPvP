@@ -349,5 +349,17 @@ client.on('guildMemberAdd', member => {
     if (!channel) return;
     channel.send({embed : embed});
     });
+
+client.on("message", (message) => {
+    if (message.content.startsWith("%ban")) {
+      if(!message.member.hasPermission('BAN_MEMBERS')) return message.reply(':warning: You Do not Have Permission');
+        var member= message.mentions.members.first();
+        member.ban().then((member) => {
+            message.channel.send(member.displayName + " See ya :wave: ");
+        }).catch(() => {
+            message.channel.send("Error -_-");
+        });
+    }
+});
   
   client.login(process.env.BOT_TOKEN);  //لا تحط التوكن حقك هنا
