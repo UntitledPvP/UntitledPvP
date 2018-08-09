@@ -1,8 +1,6 @@
 const Discord = require("discord.js");
 const bot = new Discord.Client();
 const Prefix = "%";
-
-bot.on("ready", () => {
   
   client.on('ready', () => {
     console.log('╔[════════════════════════════════════]╗');
